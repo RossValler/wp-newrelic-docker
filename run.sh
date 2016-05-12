@@ -2,6 +2,8 @@
 
 # Setup environment variables for initializing New Relic
 NR_INSTALL_SILENT=1
+NR_LICENSE_KEY="${NR_LICENSE_KEY}"
+NR_APP_NAME="${NR_APP_NAME}"
 
 # Run NR install
 newrelic-install install

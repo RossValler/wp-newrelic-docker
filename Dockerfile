@@ -10,6 +10,12 @@ RUN apt-get update && \
 RUN apt-get update && \
     apt-get -yq install newrelic-php5
 
+# Setup environment variables for initializing New Relic
+ENV NR_INSTALL_SILENT 1
+
+# Run NR install so we can add everything later
+RUN newrelic-install install
+
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
 
