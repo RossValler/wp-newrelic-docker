@@ -11,6 +11,7 @@ RUN apt-get update && \
     apt-get -yq install newrelic-php5
 
 ADD run.sh /run.sh
+RUN chmod +x /run.sh
 
 ENTRYPOINT ["/run.sh"]
 CMD ["apache2-foreground"]
